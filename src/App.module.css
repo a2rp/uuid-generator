@@ -1,0 +1,86 @@
+﻿.appShell {
+  min-height: 100vh;
+  padding-top: 70px;
+  color: var(--ink);
+  background: var(--canvas);
+  overflow: clip;
+
+  .hero {
+    position: relative;
+    padding: 63px 24px 0;
+    border-bottom: 1px solid var(--line);
+    background: radial-gradient(ellipse at 78% 48%, rgb(216 238 162 / 31%), transparent 35%), #f5f6ee;
+  }
+
+  .heroInner { display: grid; width: min(1120px, 100%); min-height: 322px; grid-template-columns: minmax(0, 1fr) minmax(0, 0.93fr); align-items: center; gap: 60px; margin: 0 auto; }
+  .heroCopy { max-width: 560px; padding-bottom: 8px; }
+  .heroLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 17px; color: var(--green); font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; }
+  .heroLabel span { width: 7px; height: 7px; border-radius: 50%; background: var(--lime-deep); box-shadow: 0 0 0 4px rgb(142 173 53 / 13%); }
+  h1 { color: var(--ink); font-size: clamp(50px, 6.6vw, 77px); font-weight: 790; letter-spacing: -0.075em; line-height: 0.96; }
+  h1 span { color: var(--green); }
+  .heroDescription { max-width: 490px; margin-top: 17px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+  .startLink { display: inline-flex; align-items: center; gap: 8px; margin-top: 17px; color: var(--ink); font-size: 11px; font-weight: 760; }
+  .startLink svg { width: 13px; height: 13px; color: var(--green); }
+  .safeNote { display: flex; align-items: center; gap: 7px; margin-top: 18px; color: var(--muted); font-size: 9px; }
+  .safeNote svg { width: 13px; height: 13px; color: var(--green); }
+
+  .heroVisual { width: min(100%, 475px); justify-self: end; padding: 20px; border: 1px solid #354139; border-radius: 15px; color: #edf3e8; background: #26312a; box-shadow: 0 23px 54px rgb(32 43 37 / 17%); }
+  .visualTop { display: flex; align-items: center; justify-content: space-between; color: #b8c6b6; font-family: var(--mono); font-size: 8px; font-weight: 700; letter-spacing: 0.1em; }
+  .visualTop > span { display: flex; align-items: center; gap: 7px; }
+  .visualTop i { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 3px rgb(215 242 120 / 12%); }
+  .visualTop b { padding: 5px 7px; border: 1px solid #4a5b4b; border-radius: 5px; color: var(--lime); font-size: 7px; }
+  .uuidSample { display: flex; align-items: center; gap: 4px; margin-top: 34px; color: #eaf1e4; font-family: var(--mono); font-size: clamp(10px, 1.15vw, 13px); font-weight: 650; white-space: nowrap; }
+  .uuidSample i { color: #789078; font-style: normal; }
+  .uuidSample strong { color: var(--lime); font-weight: 800; }
+  .visualLine { display: grid; grid-template-columns: 1fr 0.3fr 0.8fr 0.3fr 0.8fr 0.3fr 0.8fr; align-items: center; gap: 3px; margin-top: 16px; color: #8da08d; font-family: var(--mono); font-size: 6px; letter-spacing: 0.04em; }
+  .visualLine b { height: 2px; border-radius: 99px; background: #526850; font-size: 0; }
+  .visualLine b:nth-of-type(1) { background: linear-gradient(90deg, #8eaa71 25%, #536a53 25%); }
+  .visualLine b:nth-of-type(2) { background: linear-gradient(90deg, var(--lime) 28%, #536a53 28%); }
+  .visualLine b:nth-of-type(3) { background: #536a53; }
+  .visualBottom { display: flex; justify-content: space-between; gap: 8px; margin-top: 27px; padding-top: 12px; border-top: 1px solid #3c4b3e; color: #a7b6a4; font-family: var(--mono); font-size: 6px; font-weight: 700; letter-spacing: 0.08em; }
+  .visualBottom > span:first-child { display: inline-flex; align-items: center; gap: 5px; }
+  .visualBottom svg { width: 10px; height: 10px; color: var(--lime); }
+  .heroFoot { display: flex; width: min(1120px, 100%); min-height: 38px; align-items: center; justify-content: space-between; gap: 10px; margin: 42px auto 0; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: 7px; letter-spacing: 0.09em; text-transform: uppercase; }
+  .heroFoot > span:last-child { display: flex; align-items: center; gap: 6px; color: var(--green); }
+  .heroFoot i { width: 4px; height: 4px; border-radius: 50%; background: var(--lime-deep); }
+
+  .about { padding: 53px 24px 60px; border-top: 1px solid var(--line); background: #f8f9f4; scroll-margin-top: 72px; }
+  .aboutInner { width: min(1120px, 100%); margin: 0 auto; }
+  .aboutHeading { max-width: 600px; }
+  .aboutHeading > p { margin-bottom: 7px; color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+  .aboutHeading h2 { color: var(--ink); font-size: clamp(23px, 3vw, 31px); font-weight: 780; letter-spacing: -0.05em; line-height: 1.15; }
+  .aboutHeading > span { display: block; margin-top: 9px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+  .featureGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; margin-top: 23px; }
+  .featureCard { min-height: 142px; padding: 16px; border: 1px solid var(--line); border-radius: 11px; background: var(--paper); }
+  .featureCard > span { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 8px; color: var(--green); background: var(--green-soft); }
+  .featureCard svg { width: 15px; height: 15px; }
+  .featureCard h3 { margin-top: 11px; color: var(--ink); font-size: 11px; font-weight: 760; }
+  .featureCard p { margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.65; }
+  .aboutFoot { margin-top: 16px; color: var(--muted); font-size: 10px; line-height: 1.7; }
+
+  @media (max-width: 850px) {
+    .heroInner { grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 28px; }
+    .heroVisual { padding: 16px; }
+    .uuidSample { gap: 3px; font-size: clamp(9px, 1.4vw, 12px); }
+    .featureGrid { grid-template-columns: 1fr; }
+    .featureCard { min-height: auto; }
+  }
+
+  @media (max-width: 640px) {
+    padding-top: 62px;
+    .hero { padding: 39px 15px 0; }
+    .heroInner { grid-template-columns: 1fr; gap: 27px; }
+    .heroCopy { padding: 0; }
+    h1 { font-size: clamp(49px, 13vw, 66px); }
+    .heroDescription { max-width: 520px; font-size: 12px; }
+    .heroVisual { width: 100%; justify-self: stretch; padding: 17px; }
+    .uuidSample { justify-content: center; font-size: clamp(10px, 3vw, 14px); }
+    .heroFoot { min-height: 34px; margin-top: 31px; font-size: 6px; }
+    .about { padding: 40px 15px 45px; }
+  }
+
+  @media (max-width: 390px) {
+    .heroFoot { font-size: 5px; letter-spacing: 0.05em; }
+    .visualBottom { font-size: 5px; }
+  }
+}
