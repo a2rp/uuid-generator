@@ -1,0 +1,85 @@
+﻿.panel {
+  min-width: 0;
+  padding: 27px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 14px 44px rgb(36 44 38 / 5%);
+
+  .panelHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 26px;
+
+    > div { display: flex; align-items: center; gap: 11px; }
+    h2 { color: var(--ink); font-size: 18px; font-weight: 760; letter-spacing: -0.04em; }
+  }
+
+  .step {
+    display: grid;
+    width: 29px;
+    height: 29px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--green);
+    background: var(--surface);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .secure { display: inline-flex; align-items: center; gap: 5px; color: var(--green); font-size: 10px; font-weight: 700; }
+  .secure svg { width: 13px; height: 13px; }
+  .fieldLabel { display: block; margin-bottom: 7px; color: var(--ink); font-size: 12px; font-weight: 700; }
+
+  .quantityRow {
+    display: flex;
+    max-width: 330px;
+    min-height: 52px;
+    align-items: center;
+    gap: 12px;
+    padding: 0 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: var(--surface);
+
+    input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--ink); background: transparent; font-family: var(--mono); font-size: 22px; font-weight: 700; }
+    input::-webkit-inner-spin-button { margin: 0; }
+    span { flex: 0 0 auto; color: var(--muted); font-size: 11px; }
+    &:focus-within { border-color: var(--green); box-shadow: 0 0 0 3px rgb(83 112 89 / 12%); }
+  }
+
+  .helperText { margin-top: 7px; color: var(--muted); font-size: 10px; }
+  .presets { display: flex; align-items: center; gap: 7px; margin-top: 13px; }
+  .presets button { min-width: 37px; height: 28px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); background: var(--paper); font-family: var(--mono); font-size: 10px; transition: border-color 150ms ease, box-shadow 150ms ease; }
+  .presets button[aria-pressed="true"] { border-color: var(--green); color: var(--green); background: var(--green-soft); }
+  .presets button:hover { border-color: var(--green); box-shadow: 0 0 0 2px rgb(83 112 89 / 9%); }
+  .presets > span { margin-left: 3px; color: var(--muted); font-size: 9px; }
+
+  .formatField { min-width: 0; margin-top: 23px; border: 0; }
+  .formatField legend { margin-bottom: 8px; color: var(--ink); font-size: 12px; font-weight: 700; }
+  .formatChoices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .formatChoices button { display: grid; min-width: 0; gap: 6px; padding: 12px; border: 1px solid var(--line); border-radius: 9px; text-align: left; background: var(--surface); transition: border-color 150ms ease, box-shadow 150ms ease; }
+  .formatChoices button:hover { border-color: var(--green); box-shadow: 0 0 0 2px rgb(83 112 89 / 9%); }
+  .formatChoices .selected { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+  .formatChoices b { color: var(--ink); font-size: 11px; }
+  .formatChoices code { overflow: hidden; color: var(--muted); font-family: var(--mono); font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+
+  .options { display: flex; flex-wrap: wrap; gap: 12px 21px; margin-top: 17px; }
+  .options label { display: inline-flex; align-items: center; gap: 7px; color: var(--ink-soft); font-size: 11px; cursor: pointer; }
+  .options input { width: 14px; height: 14px; accent-color: var(--green); }
+
+  .generateButton { display: flex; width: 100%; min-height: 48px; align-items: center; justify-content: center; gap: 9px; margin-top: 23px; border: 1px solid var(--ink); border-radius: 10px; color: var(--paper); background: var(--ink); font-size: 12px; font-weight: 760; transition: border-color 150ms ease, box-shadow 150ms ease; }
+  .generateButton svg { width: 15px; height: 15px; }
+  .generateButton span { margin-left: 3px; color: var(--lime); font-size: 16px; }
+  .generateButton:hover { border-color: var(--green); box-shadow: 0 0 0 4px rgb(66 98 78 / 15%); }
+
+  @media (max-width: 560px) {
+    padding: 19px;
+    .panelHeading { margin-bottom: 21px; }
+    .formatChoices code { font-size: 7px; }
+  }
+}
