@@ -1,0 +1,31 @@
+﻿.workbench {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 56px 0 67px;
+  scroll-margin-top: 82px;
+
+  .heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-bottom: 22px; }
+  .sectionLabel { margin-bottom: 8px; color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+  .heading h2 { color: var(--ink); font-size: clamp(25px, 3.3vw, 34px); font-weight: 790; letter-spacing: -0.055em; line-height: 1.1; }
+  .heading > div:first-child > p:last-child { margin-top: 8px; color: var(--muted); font-size: 12px; }
+  .localTag { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 7px; margin-bottom: 2px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 99px; color: var(--green); background: var(--paper); font-size: 9px; font-weight: 700; }
+  .localTag span { width: 6px; height: 6px; border-radius: 50%; background: var(--lime-deep); box-shadow: 0 0 0 3px rgb(167 199 75 / 17%); }
+  .grid { display: grid; grid-template-columns: minmax(290px, 0.78fr) minmax(0, 1.22fr); align-items: stretch; gap: 15px; }
+  .error, .notice { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 11px; }
+  .error { border: 1px solid #e9c9c3; color: var(--danger); background: var(--danger-soft); }
+  .notice { border: 1px solid #d5e2d0; color: var(--green); background: var(--green-soft); }
+  .limitNote { display: flex; align-items: center; gap: 9px; margin-top: 16px; color: var(--muted); font-size: 9px; }
+  .limitNote span { width: 3px; height: 3px; border-radius: 50%; background: var(--green); }
+
+  @media (max-width: 880px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    width: calc(100% - 30px);
+    padding: 40px 0 48px;
+    .heading { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 17px; }
+    .heading > div:first-child > p:last-child { max-width: 420px; font-size: 11px; }
+    .limitNote { flex-wrap: wrap; gap: 6px; font-size: 8px; }
+  }
+}
